@@ -16,6 +16,10 @@
 				"ms-vscode.vscode-node-azure-pack",
 				"ms-toolsai.jupyter-keymap",
 				"ms-toolsai.jupyter",
+				"GitHub.remotehub",
+				"esbenp.prettier-vscode",
+				"ms-vscode-remote.remote-containers",
+				"analytic-signal.preview-pdf",
 				"eamodio.gitlens"
 			]
 		}
