@@ -1,25 +1,24 @@
-# Streamlit ChatGPT Harness
-
-A fully python based Streamlit development harness for ChatGPT hosted in Azure OpenAI Service.
+# Spot by NetApp - Generative AI Repository for Generative AI and LLM learning
 
 ## Getting Started
 
-### Configure to run locally in Docker Container Environment
+This GitHub repo is meant to provide Spot Developers with a controlled development docker container for learning and testing Generative AI. Using this repo will provide Spot Develoeprs a quick and reliable way to gain access to a dedicated, secure, and audited Azure OpenAI service. 
 
-To get started, you will need to create a `.env` file in the .devcontainer folder.  You will need to fill in the following values:
+### To Run Locally
 
-```bash
-AZURE_OPENAI_ENDPOINT=https://mysite.openai.azure.com/
-AZURE_OPENAI_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-AZURE_OPENAI_API_VERSION=2023-03-15-preview
-AZURE_OPENAI_CHATGPT_DEPLOYMENT=gpt-35-turbo
-```
+This repo has only been tested on Windows using VSCode and Docker Desktop to run a dev container. We will need to consider using other options if this doesn't scale well.
 
-You can find the values for these variables in the Azure Portal.  You will need to create an Azure OpenAI resource and deploy the ChatGPT model to it.  Once you have done that, you can find the values for these variables in the resource.
+* [VSCode](https://code.visualstudio.com/download)
+* [Git](https://git-scm.com/downloads)
+* [Docker VSCode Extension](https://code.visualstudio.com/docs/containers/overview)
+* [Docker Desktop](https://docs.docker.com/desktop/)
 
-### Running the App
-
-To run the app, simply run the `streamlit run app.py`.  This will start the app on port 8501.  You can then access the app at `http://localhost:8501`. If running in a container, you will need to forward the port to your local machine if VSCode does not do it for you automatically.
+#### When Properly configured to run locally, You should expect the following:
+ - When VSCode opens this repo it will automatically load the repo in a Docker conatiner python image.
+ - Environmental variables will automatically be loaded for the Python Virtual Environment
+ - Python will auto pip install everything in the "requirements.txt" file
+ - Sample Notebooks will load correc variables and have a python virtual environment available to run sample code.
+ - Running `streamlit run Streamlit-ChatBot-App.py` from a terminal. You can then access a local chatbot app app at `http://localhost:8501`. 
 
 ### Devcontainer
 
@@ -29,22 +28,19 @@ This project is designed to be used with VSCode and the Remote Containers extens
 
 The `requirements.txt` file contains all the python dependencies for this project.  The `devcontainer.json` file will automatically install these dependencies when the container is built.
 
-## Deploy to Azure Web App Service using GitHub Actions with CI/CD
-### Create Web App from Azure Marketplace
-![image](https://github.com/bsonnek/Streamlit-Azure-OAI-WebApp/assets/10324197/2d0b177a-f9bc-4a6e-8d8d-c18b2cbeff7a)
+### Configure to run locally in Docker Container Environment
 
+To get started, you will need to create a `.env` file in the .devcontainer folder.  You will need to fill in the following values provided to you for the Azure API Management Service. Each Spot Gropu will have their own dedicated Endpoint for tracking and logging. Typically this Endpoint field would point to and OpenAI Instance:
 
-### Web App Deployment Settings
+```bash
+AZURE_OPENAI_ENDPOINT =
+AZURE_OPENAI_KEY =
+```
 
-![image](https://github.com/bsonnek/Streamlit-Azure-OAI-WebApp/assets/10324197/a9e83f25-d8a2-4e04-b385-d95ef0c8eb8a)
+### Running the App
 
+To run the app, simply run the `streamlit run Streamlit-ChatBot-App.py`.  This will start the app on port 8501.  You can then access the app at `http://localhost:8501`. If running in a container, you will need to forward the port to your local machine if VSCode does not do it for you automatically.
 
-### Configure  Application Setting Variables from your .ENV file values
-
-![image](https://github.com/bsonnek/Streamlit-Azure-OAI-WebApp/assets/10324197/8f12a9c1-0bc0-4d36-ab83-338c2057c632)
-
-### Configure Startup Command
-![image](https://github.com/bsonnek/Streamlit-Azure-OAI-WebApp/assets/10324197/d6f4417e-5822-428c-b176-d43dc6f3fec1)
 
 
 
