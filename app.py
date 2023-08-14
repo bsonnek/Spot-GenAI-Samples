@@ -101,7 +101,7 @@ def generate_response(prompt):
     return response, total_tokens, prompt_tokens, completion_tokens
 
 
-st.title("Blair ChatGPT Demo")
+st.title("Spot ChatGPT Demo")
 
 # container for chat history
 response_container = st.container()
