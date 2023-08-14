@@ -6,18 +6,18 @@ This GitHub repo is meant to provide Spot Developers with a controlled developme
 
 ### To Run Locally
 
-This repo has only been tested on Windows using VSCode and Docker Desktop to run a dev container. We will need to consider using other options if this doesn't scale well.
+This repo has only been tested on Windows using VSCode and Docker Desktop to run a docker dev container. We will need to consider using other options if this doesn't scale well.
 
-* [VSCode](https://code.visualstudio.com/download)
-* [Git](https://git-scm.com/downloads)
-* [Docker VSCode Extension](https://code.visualstudio.com/docs/containers/overview)
-* [Docker Desktop](https://docs.docker.com/desktop/)
+* [VSCode](https://code.visualstudio.com/download) - Install VSCode if not already installed.
+* [Git](https://git-scm.com/downloads) - Instal git
+* [Docker VSCode Extension](https://code.visualstudio.com/docs/containers/overview) - Install Docker Extension in VSCode
+* [Docker Desktop](https://docs.docker.com/desktop/) - Install Docker Desktop on local machine. The Docker Extension in VSCode will detect it automatically and use it to build a docker image for this project.
 
 #### When Properly configured to run locally, You should expect the following:
  - When VSCode opens this repo it will automatically load the repo in a Docker conatiner python image.
  - Environmental variables will automatically be loaded for the Python Virtual Environment
  - Python will auto pip install everything in the "requirements.txt" file
- - Sample Notebooks will load correc variables and have a python virtual environment available to run sample code.
+ - Sample Notebooks will load .env variables and have a python virtual environment available to run sample code.
  - Running `streamlit run Streamlit-ChatBot-App.py` from a terminal. You can then access a local chatbot app app at `http://localhost:8501`. 
 
 ### Devcontainer
