@@ -12,8 +12,9 @@ import json
 openai.api_type = "azure"
 openai.api_base = os.environ.get("AZURE_OPENAI_ENDPOINT")
 openai.api_version = os.environ.get("AZURE_OPENAI_API_VERSION")
-openai.api_key = os.environ.get("AZURE_OPENAI_KEY")
-Chatengine = "gpt-35-turbo"
+openai.api_key = os.environ.get("AZURE_OPENAI_API_KEY")
+
+Chatengine = os.environ.get("AZURE_OPENAI_CHAT_MODEL")
 # endregion
 
 # region PROMPT SETUP
