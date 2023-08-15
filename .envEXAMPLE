@@ -1,5 +1,5 @@
 AZURE_OPENAI_API_TYPE=azure
-AZURE_OPENAI_ENDPOINT=https://your-api-keyhere.com
+AZURE_OPENAI_ENDPOINT=https://your-api-keyhere.com/name/
 AZURE_OPENAI_API_KEY=xxxxxxxxxxx
 AZURE_OPENAI_API_VERSION=2023-05-15
 AZURE_OPENAI_TEXT_MODEL=text-davinci-003

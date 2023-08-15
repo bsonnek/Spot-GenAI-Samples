@@ -1,4 +1,4 @@
-# Spot by NetApp - Repository for Generative AI and LLM learning
+# Spot - Repository for Generative AI and LLM learning
 
 ## Getting Started
 
