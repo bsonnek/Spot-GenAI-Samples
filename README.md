@@ -33,7 +33,7 @@ To get started, you will need to create a `.env` file in the root.  You will nee
 
 ```bash
 AZURE_OPENAI_ENDPOINT =
-AZURE_OPENAI_KEY =
+AZURE_OPENAI_API_KEY =
 ```
 
 When Changing Variables - You will need to rebuild the docker container to update variables in the Python virtual environment:
