@@ -16,7 +16,8 @@ This repo has only been tested on Windows using VSCode and Docker Desktop to run
 * After Cloning the repo, VSCode should then prompt to open the repo in a container. This will build the container and install all the dependencies.
 * VSCode will then automatically build a Docker Container for this project locally. VSCode will Remotely connect to the container once the container is built. 
 
-### Create .env File  - ** Do not build docker container until you complete this step **
+# ** Do Not Builder Docker Until You Create the .env File **
+### Create .env File  - 
 
 To get started, you will need to create a `.env` file in the root.  Use the existing .envEXAMPLE as a template for the new .env file.
 
