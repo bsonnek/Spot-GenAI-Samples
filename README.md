@@ -13,8 +13,9 @@ This repo has only been tested on Windows using VSCode and Docker Desktop to run
 * [Docker VSCode Extension](https://code.visualstudio.com/docs/containers/overview) - Install Docker Extension while in VSCode
 * [Docker Desktop](https://docs.docker.com/desktop/) - Install Docker Desktop on local machine. The Docker Extension in VSCode will detect Docker Desktop automatically and use it to build a docker image for this project.
 * [Clone Repo in VSCode](https://learn.microsoft.com/en-us/azure/developer/javascript/how-to/with-visual-studio-code/clone-github-repository?tabs=create-repo-command-palette%2Cinitialize-repo-activity-bar%2Ccreate-branch-command-palette%2Ccommit-changes-command-palette%2Cpush-command-palette) - Clone this repo to VSCode.
+* **DO Not Build Docker Container after Closing Repo** Follow steps below to create the .env file first before building docker. 
 * After Cloning the repo, VSCode should then prompt to open the repo in a container. This will build the container and install all the dependencies.
-* VSCode will then automatically build a Docker Container for this project locally. VSCode will Remotely connect to the container once the container is built. 
+* VSCode Can then build a Docker Container for this project locally. Once, VSCode builds the docker it will then Remotely connect to the container. 
 
 # ** Do Not Builder Docker Until You Create the .env File **
 ### Create .env File  - 
