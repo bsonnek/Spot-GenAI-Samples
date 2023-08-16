@@ -16,20 +16,12 @@ This repo has only been tested on Windows using VSCode and Docker Desktop to run
 * After Cloning the repo, VSCode should then prompt to open the repo in a container. This will build the container and install all the dependencies.
 * VSCode will then automatically build a Docker Container for this project locally. VSCode will Remotely connect to the container once the container is built. 
 
-#### When Properly configured to run locally, You should expect the following:
- - When VSCode opens this repo it will automatically load the repo in a Docker conatiner python image.
- - Environmental variables will automatically be loaded for the Python Virtual Environment
- - Python will auto pip install everything in the "requirements.txt" file
- - Sample Notebooks will load .env variables and have a python virtual environment available to run sample code.
- - Running `streamlit run Streamlit-ChatBot-App.py` from a terminal. You will have access a local chatbot app from your local browser `http://localhost:8501`. 
+### Create .env File  - **Do not build docker container until you complete this step**
 
-### Python Dependencies
+To get started, you will need to create a `.env` file in the root.  Use the existing .envEXAMPLE as a template for the new .env file.
 
-The `requirements.txt` file contains all the python dependencies for this project.  The `devcontainer.json` file will automatically install these dependencies when the container is built.
-
-### Configure to run locally in Docker Container Environment
-
-To get started, you will need to create a `.env` file in the root.  You will need to fill in the following values provided to you for the Azure API Management Service. Each Spot Group will have their own dedicated Endpoint and API Key for tracking and logging purposes.:
+You will need to fill in the following values provided to you for the Azure API Management Service. 
+Each Spot Group will have their own dedicated Endpoint and API Key for tracking and logging purposes.
 
 ```bash
 AZURE_OPENAI_ENDPOINT =
@@ -38,6 +30,18 @@ AZURE_OPENAI_API_KEY =
 
 When Changing Variables - You will need to rebuild the docker container to update variables in the Python virtual environment:
     - run Dev Containers: Rebuild Container from the Command Palette (F1) to pick up the change.
+
+### Python Dependencies
+
+The `requirements.txt` file contains all the python dependencies for this project.  The `devcontainer.json` file will automatically install these dependencies when the container is built.
+
+#### When Properly configured to run locally, You should expect the following:
+ - When VSCode opens this repo it will automatically load the repo in a Docker conatiner python image.
+ - Environmental variables will automatically be loaded for the Python Virtual Environment
+ - Python will auto pip install everything in the "requirements.txt" file
+ - Sample Notebooks will load .env variables and have a python virtual environment available to run sample code.
+ - Running `streamlit run Streamlit-ChatBot-App.py` from a terminal. You will have access a local chatbot app from your local browser `http://localhost:8501`. 
+
 ### Running the App
 
 To run the app, simply run the `streamlit run Streamlit-ChatBot-App.py`.  This will start the app on port 8501.  You can then access the app at `http://localhost:8501`. If running in a container, you will need to forward the port to your local machine if VSCode does not do it for you automatically.

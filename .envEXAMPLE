@@ -1,3 +1,8 @@
+
+### TIPs: 
+### Do Not add spaces before or after the =
+### Do Not add  "" around your values
+
 AZURE_OPENAI_API_TYPE=azure
 AZURE_OPENAI_ENDPOINT=https://your-api-keyhere.com/name/
 AZURE_OPENAI_API_KEY=xxxxxxxxxxx
