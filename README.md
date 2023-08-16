@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This GitHub repo is meant to provide Spot Developers with a controlled development docker container for learning and testing Generative AI. Using this repo will provide Spot Developers a quick and reliable way to gain access to a dedicated, secure, and audited Azure OpenAI service. 
+This GitHub repo is meant to provide Spot developers with a controlled development docker container for learning and testing Generative AI. Using this repo will provide Spot developers a quick and reliable way to gain access to a dedicated, secure, and audited Azure OpenAI service. 
 
 ### To Run Locally
 
@@ -16,7 +16,7 @@ This repo has only been tested on Windows using VSCode and Docker Desktop to run
 * After Cloning the repo, VSCode should then prompt to open the repo in a container. This will build the container and install all the dependencies.
 * VSCode will then automatically build a Docker Container for this project locally. VSCode will Remotely connect to the container once the container is built. 
 
-### Create .env File  - **Do not build docker container until you complete this step**
+### Create .env File  - ** Do not build docker container until you complete this step **
 
 To get started, you will need to create a `.env` file in the root.  Use the existing .envEXAMPLE as a template for the new .env file.
 
