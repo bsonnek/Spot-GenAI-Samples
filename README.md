@@ -25,8 +25,8 @@ You will need to fill in the following values provided to you for the Azure API 
 Each Spot Group will have their own dedicated Endpoint and API Key for tracking and logging purposes.
 
 ```bash
-AZURE_OPENAI_ENDPOINT =
-AZURE_OPENAI_API_KEY =
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_API_KEY=
 ```
 
 When Changing Variables - You will need to rebuild the docker container to update variables in the Python virtual environment:
