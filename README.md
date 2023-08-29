@@ -1,5 +1,9 @@
 # Spot - Repository for Generative AI and LLM learning
 
+## Design
+![image](https://github.com/bsonnek/Spot-GenAI-Samples/assets/10324197/a8417dc2-dd9c-4e4b-af79-d090cee3e973)
+
+
 ## Getting Started
 
 This GitHub repo is meant to provide Spot developers with a controlled development docker container for learning and testing Generative AI. Using this repo will provide Spot developers a quick and reliable way to gain access to a dedicated, secure, and audited Azure OpenAI service. 
