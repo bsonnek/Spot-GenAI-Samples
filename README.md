@@ -50,7 +50,7 @@ The `requirements.txt` file contains all the python dependencies for this projec
 
 ### Running the App
 
-To run the app, simply run the `streamlit run Streamlit-ChatBot-App.py`.  This will start the app on port 8501.  You can then access the app at `http://localhost:8501`. If running in a container, you will need to forward the port to your local machine if VSCode does not do it for you automatically.
+To run the app, simply run the `streamlit run Streamlit-Samples/Streamlit-ChatBot-App.py`.  This will start the app on port 8501.  You can then access the app at `http://localhost:8501`. If running in a container, you will need to forward the port to your local machine if VSCode does not do it for you automatically.
 
 ## Credits
 

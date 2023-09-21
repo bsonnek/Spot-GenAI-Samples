@@ -18,6 +18,8 @@ Chatengine = os.environ.get("AZURE_OPENAI_CHAT_MODEL")
 # endregion
 
 # region PROMPT SETUP
+st.set_page_config(page_title="Spot ChatGPT Demo", layout="wide")
+#st.title("Spot ChatGPT Demo")
 
 default_prompt = """
 You are an AI assistant  that helps users write concise\
@@ -27,6 +29,7 @@ You are an AI assistant  that helps users write concise\
  information between or within sources. Greet the user by asking\
  what they'd like to investigate.
 """
+
 
 system_prompt = st.sidebar.text_area("System Prompt", default_prompt, height=200)
 seed_message = {"role": "system", "content": system_prompt}
@@ -102,7 +105,6 @@ def generate_response(prompt):
     return response, total_tokens, prompt_tokens, completion_tokens
 
 
-st.title("Spot ChatGPT Demo")
 
 # container for chat history
 response_container = st.container()

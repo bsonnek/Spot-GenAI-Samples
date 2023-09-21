@@ -26,6 +26,7 @@ openai.api_version = AZURE_OPENAI_API_VERSION
 openai.api_base = AZURE_OPENAI_ENDPOINT
 openai.api_key = AZURE_OPENAI_API_KEY
 
+st.set_page_config(page_title="Spot ChatGPT Demo", layout="wide")
 # Sidebar contents
 with st.sidebar:
     st.title('🤗💬 LLM Chat App')
