@@ -30,9 +30,13 @@ You are an AI assistant  that helps users write concise\
  what they'd like to investigate.
 """
 
-
-system_prompt = st.sidebar.text_area("System Prompt", default_prompt, height=200)
+system_prompt = st.sidebar.text_area("System Prompt", value=default_prompt, key='system_prompt', height=400)
 seed_message = {"role": "system", "content": system_prompt}
+update_prompt_button = st.sidebar.button("Update System Prompt", key="update")
+
+if update_prompt_button:
+    seed_message = {"role": "system", "content": system_prompt}
+    st.session_state["messages"] = [seed_message]
 # endregion
 
 # region SESSION MANAGEMENT
