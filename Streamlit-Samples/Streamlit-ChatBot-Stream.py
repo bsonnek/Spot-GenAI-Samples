@@ -17,12 +17,12 @@ openai.api_key = os.environ.get("AZURE_OPENAI_API_KEY")
 # endregion
 
 # region PROMPT SETUP
-st.set_page_config(page_title="Spot GenAI Chat", layout="wide", page_icon=":robot_face:")
-st.markdown("<h1 style='text-align: left;'>Spot GenAI Chat </h1>", unsafe_allow_html=True)
+st.set_page_config(page_title="Spot ChatGPT Demo", layout="wide", page_icon=":robot_face:")
+st.markdown("<h1 style='text-align: left;'>Spot ChatGPT Demo </h1>", unsafe_allow_html=True)
 st.sidebar.markdown(
     f"""
-    <div style="display:table;margin-top:-20%;margin-left:20%;">
-        <img src="https://github.com/bsonnek/Spot-GenAI-Samples/assets/10324197/3bdd240d-d634-460e-833f-501da873eba0" width="150" height="100">
+    <div style="display:table;margin-top:-40%;margin-left:5%;">
+        <img src="https://github.com/bsonnek/Spot-GenAI-Samples/assets/10324197/1aab906e-ab44-420a-9823-1d9f3432e50a" width="500" height="200">
     </div>
     """,
     unsafe_allow_html=True,
@@ -107,23 +107,30 @@ download_conversation_button = st.sidebar.download_button(
 
 def generate_response(prompt):
     st.session_state["messages"].append({"role": "user", "content": prompt})
-    try:
-        completion = openai.ChatCompletion.create(
-            engine=model,
-            temperature = Temp_var,
-            messages=st.session_state["messages"],
-        )
-        response = completion.choices[0].message.content
-    except openai.error.APIError as e:
-        st.write(response)
-        response = f"The API could not handle this content: {str(e)}"
-    st.session_state["messages"].append({"role": "assistant", "content": response})
+    message_placeholder = st.empty()
+    full_response = ""
+    total_tokens = ""
+    prompt_tokens = ""
+    completion_tokens = ""
+    for response in openai.ChatCompletion.create(
+        engine=model,
+        messages=[
+            {"role": m["role"], "content": m["content"]}
+            for m in st.session_state.messages
+        ],
+        stream=True,
+        ):
+        full_response += response.choices[0].delta.get("content", "")
+        total_tokens += response.usage.total_tokens
+        prompt_tokens += response.usage.prompt_tokens
+        completion_tokens += response.usage.completion_tokens
+        message_placeholder.markdown(full_response + "▌")
+        message_placeholder.markdown(full_response)
+    st.session_state["messages"].append({"role": "assistant", "content": full_response})
 
     # print(st.session_state['messages'])
-    total_tokens = completion.usage.total_tokens
-    prompt_tokens = completion.usage.prompt_tokens
-    completion_tokens = completion.usage.completion_tokens
-    return response, total_tokens, prompt_tokens, completion_tokens
+
+    return full_response, total_tokens, prompt_tokens, completion_tokens
 
 
 
