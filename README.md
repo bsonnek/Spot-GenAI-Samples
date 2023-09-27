@@ -1,7 +1,8 @@
 # Spot - Repository for Generative AI and LLM learning
 
 ## Design
-![image](https://github.com/bsonnek/Spot-GenAI-Samples/assets/10324197/a8417dc2-dd9c-4e4b-af79-d090cee3e973)
+![image](https://github.com/bsonnek/Spot-GenAI-Samples/assets/10324197/5172c73a-b6f7-46de-870e-bf8af76fcb1b)
+
 
 
 ## Getting Started
