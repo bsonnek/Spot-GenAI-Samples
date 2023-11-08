@@ -8,3 +8,7 @@ PyPDF2==3.0.1
 tiktoken==0.4.0
 faiss-cpu==1.7.4
 altair<5
+azure-identity 
+qdrant-client
+google-api-python-client
+pyautogen~=0.1.0
