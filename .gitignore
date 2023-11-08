@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+## AutoGen Excludes
+*AutoGen/.cache
+*AutoGen/paper
+*AutoGen/coding
+*AutoGen/web
+
 # Exclude Test Folder
 Tests/
 
