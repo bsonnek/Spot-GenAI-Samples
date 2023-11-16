@@ -12,3 +12,4 @@ azure-identity
 qdrant-client
 google-api-python-client
 pyautogen~=0.1.0
+chromadb
